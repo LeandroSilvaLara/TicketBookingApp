@@ -1,3 +1,4 @@
+import 'package:bookitickets/utils/app_styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -7,16 +8,26 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFeedf2),
+      backgroundColor: Styles.bgColor,
       body: ListView(
         children: [
           Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
-                        "Good morning"
+                    const Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                            "Good morning"
+                        ),
+                        Text(
+                            "Book Tickets"
+                        ),
+                      ],
                     ),
                     Container(
                       height: 50,
